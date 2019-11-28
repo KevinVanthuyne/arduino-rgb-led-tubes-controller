@@ -48,13 +48,15 @@ LiquidMenu liquidMenu(lcd);
 Navigation currentNavigation = NONE;
 
 ProgramModeMenu programModeMenu;
+AutoModeMenu autoModeMenu;
 
 // mode variables
 ProgramMode programMode;
-Mode *modes[1] = {&programMode};
+AutoMode autoMode;
+Mode *modes[2] = {&programMode, &autoMode};
 
 int currentMode = 0;
-int amountOfModes = 1;
+int amountOfModes = 2;
 int currentProgram = 1;
 uint8_t programSpeed = 128; // ranges from 0 to 255
 
@@ -96,10 +98,12 @@ void setup()
 
   // setup menu's
   programModeMenu = ProgramModeMenu();
+  autoModeMenu = AutoModeMenu();
 
   // setup LiquidMenu and Modes
   liquidMenu.init();
   programMode = ProgramMode(&programModeMenu);
+  autoMode = AutoMode(&autoModeMenu);
   liquidMenu.update();
 }
 

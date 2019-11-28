@@ -2,7 +2,7 @@
 
 #include "../Globals.h"
 #include "Mode.h"
-#include "../menus/ProgramModeMenu.h"
+#include "../menus/Menu.h"
 #include "../Utils.h"
 #include "../programs/Programs.h"
 
