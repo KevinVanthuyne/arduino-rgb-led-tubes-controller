@@ -9,7 +9,7 @@ public:
     ColorSweepInToOutToInProgram() : Program(), currentColor(CRGB::Red), previousNumber(-1), goingToEdges(true) {}
     int runIteration(uint8_t speed)
     {
-        int center = (int)floor(pixelsPerTube / 2);
+        unsigned int center = (int)floor(pixelsPerTube / 2);
 
         if (goingToEdges)
         {
@@ -64,7 +64,7 @@ private:
     CRGB currentColor;
     int previousNumber;
     bool goingToEdges;
-    bool resetCurrentIterationIfNeeded(int center)
+    bool resetCurrentIterationIfNeeded(unsigned int center)
     {
         // reset iteration and get a new random color
         if (currentIteration >= center)

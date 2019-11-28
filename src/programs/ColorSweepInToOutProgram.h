@@ -9,7 +9,7 @@ public:
     ColorSweepInToOutProgram() : Program(), currentColor(CRGB::Red), previousNumber(-1) {}
     int runIteration(uint8_t speed)
     {
-        int center = (int)floor(pixelsPerTube / 2);
+        unsigned int center = (unsigned int)floor(pixelsPerTube / 2);
 
         if (currentIteration > center)
         {
@@ -21,7 +21,8 @@ public:
 
         for (CRGB *ledStrip : ledStrips)
         {
-            ledStrip[center + currentIteration] = currentColor;
+            if ((center + currentIteration) < pixelsPerTube) // prevents setting a pixel just outside of the strip
+                ledStrip[center + currentIteration] = currentColor;
             ledStrip[center - currentIteration] = currentColor;
         }
         FastLED.show();

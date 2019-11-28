@@ -16,6 +16,6 @@ public:
     void runIteration();
 
 private:
-    int iterationDelay;
-    unsigned int previousIterationMillis;
+    unsigned long iterationDelay;
+    unsigned long previousIterationMillis;
 };
