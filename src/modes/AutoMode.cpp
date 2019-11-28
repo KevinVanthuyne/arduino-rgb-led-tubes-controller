@@ -7,6 +7,8 @@ void AutoMode::runIteration()
     // only runs an iteration of the program when the required delay has passed
     if (currentMillis - previousIterationMillis >= iterationDelay)
     {
+        previousIterationMillis = currentMillis;
+
         switch (currentProgram)
         {
         // TODO program 0 will cycle through all programs automatically
@@ -32,6 +34,5 @@ void AutoMode::runIteration()
             iterationDelay = sparkleProgram.runIteration(programSpeed);
             break;
         }
-        previousIterationMillis = currentMillis;
     }
 }

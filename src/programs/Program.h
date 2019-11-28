@@ -18,13 +18,14 @@ protected:
 
     // colors
     CRGB colors[9] = {
-        CRGB::Red,
-        CRGB::Orange,
-        CRGB::Yellow,
-        CRGB::Green,
-        CRGB::Cyan,
-        CRGB::LightBlue,
-        CRGB::Blue,
-        CRGB::Purple,
-        CRGB::Pink};
+        CRGB(255, 0, 0),   // red
+        CRGB(255, 128, 0), // orange
+        CRGB(255, 255, 0), // yellow
+        CRGB(0, 255, 0),   // green
+        CRGB(0, 255, 128), // cyan
+        CRGB(0, 128, 255), // light blue
+        CRGB(0, 0, 255),   // blue
+        CRGB(128, 0, 255), // purple
+        CRGB(255, 0, 255), // pink
+    };
 };

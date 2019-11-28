@@ -22,7 +22,8 @@ public:
                 {
                     // big enough gap for black to get a better effect
                     for (int offset = 0; offset < 5; offset++)
-                        ledStrip[i + offset] = CRGB::Black;
+                        if ((i + offset) < pixelsPerTube)
+                            ledStrip[i + offset] = CRGB::Black;
                     i += 5;
                 }
             }

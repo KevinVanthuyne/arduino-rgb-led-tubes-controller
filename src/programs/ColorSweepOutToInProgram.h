@@ -9,7 +9,7 @@ public:
     ColorSweepOutToInProgram() : Program(), currentColor(CRGB::Red), previousNumber(-1) {}
     int runIteration(uint8_t speed)
     {
-        int center = (int)floor(pixelsPerTube / 2);
+        unsigned int center = (int)floor(pixelsPerTube / 2);
 
         if (currentIteration >= center)
         {

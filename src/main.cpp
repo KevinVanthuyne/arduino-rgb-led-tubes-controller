@@ -3,10 +3,17 @@
 #include "main.h"
 
 // input buttons config
-#define BUTTON_UP 22
+#define BUTTON_DOWN 22
 #define BUTTON_RIGHT 24
-#define BUTTON_DOWN 26
-#define BUTTON_LEFT 28
+#define BUTTON_LEFT 26 // kleft
+#define BUTTON_UP 28
+
+bool lastButtonUpState = HIGH;
+bool lastButtonRightState = HIGH;
+bool lastButtonDownState = HIGH;
+bool lastButtonLeftState = HIGH;
+unsigned long lastDebounceMillis = 0;
+unsigned long debounceTime = 100;
 
 // mic config
 #define MIC_PIN A1
@@ -60,30 +67,9 @@ ColorSweepOutToInProgram colorSweepOutToInProgram;
 ColorSweepInToOutToInProgram colorSweepInToOutToInProgram;
 SparkleProgram sparkleProgram;
 
-// interrupt handlers for navigation
-void upPressed()
-{
-  currentNavigation = UP;
-}
-
-void rightPressed()
-{
-  currentNavigation = RIGHT;
-}
-
-void downPressed()
-{
-  currentNavigation = DOWN;
-}
-
-void leftPressed()
-{
-  currentNavigation = LEFT;
-}
-
 void setup()
 {
-  Serial.begin(115200);
+  Serial.begin(9600);
   randomSeed(analogRead(A0));
   pinMode(MIC_PIN, INPUT);
 
@@ -98,10 +84,6 @@ void setup()
   pinMode(BUTTON_RIGHT, INPUT_PULLUP);
   pinMode(BUTTON_DOWN, INPUT_PULLUP);
   pinMode(BUTTON_LEFT, INPUT_PULLUP);
-  attachInterrupt(BUTTON_UP, upPressed, FALLING);
-  attachInterrupt(BUTTON_RIGHT, rightPressed, FALLING);
-  attachInterrupt(BUTTON_DOWN, downPressed, FALLING);
-  attachInterrupt(BUTTON_LEFT, leftPressed, FALLING);
 
   // set up led tubes
   FastLED.addLeds<WS2812, TUBE_1_PIN, RGB>(leds1, PIXELS_PER_TUBE);
@@ -129,27 +111,34 @@ void loop()
 
 void handleNavigation()
 {
-  switch (currentNavigation)
+  bool buttonUpReading = digitalRead(BUTTON_UP);
+  bool buttonRightReading = digitalRead(BUTTON_RIGHT);
+  bool buttonDownReading = digitalRead(BUTTON_DOWN);
+  bool buttonLeftReading = digitalRead(BUTTON_LEFT);
+
+  if (buttonUpReading != lastButtonUpState && (millis() - lastDebounceMillis) > debounceTime)
   {
-  case UP:
     modes[currentMode]->menu->up();
-    break;
-  case RIGHT:
+    lastDebounceMillis = millis();
+  }
+  else if (buttonRightReading != lastButtonRightState && (millis() - lastDebounceMillis) > debounceTime)
+  {
     modes[currentMode]->menu->right();
-    break;
-  case DOWN:
+    lastDebounceMillis = millis();
+  }
+  else if (buttonDownReading != lastButtonDownState && (millis() - lastDebounceMillis) > debounceTime)
+  {
     modes[currentMode]->menu->down();
-    break;
-  case LEFT:
+    lastDebounceMillis = millis();
+  }
+  else if (buttonLeftReading != lastButtonLeftState && (millis() - lastDebounceMillis) > debounceTime)
+  {
     modes[currentMode]->menu->left();
-    break;
-  default:
-    currentNavigation = NONE;
-    break;
+    lastDebounceMillis = millis();
   }
 
-  if (currentNavigation == UP || currentNavigation == RIGHT || currentNavigation == DOWN || currentNavigation == LEFT)
-  {
-    currentNavigation = NONE;
-  }
+  lastButtonUpState = buttonUpReading;
+  lastButtonRightState = buttonRightReading;
+  lastButtonDownState = buttonDownReading;
+  lastButtonLeftState = buttonLeftReading;
 }
