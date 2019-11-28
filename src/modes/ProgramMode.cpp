@@ -1,6 +1,6 @@
-#include "AutoMode.h"
+#include "ProgramMode.h"
 
-void AutoMode::runIteration()
+void ProgramMode::runIteration()
 {
     unsigned long currentMillis = millis();
 

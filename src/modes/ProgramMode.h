@@ -2,15 +2,15 @@
 
 #include "../Globals.h"
 #include "Mode.h"
-#include "../menus/AutoMenu.h"
+#include "../menus/ProgramModeMenu.h"
 #include "../Utils.h"
 #include "../programs/Programs.h"
 
-class AutoMode : public Mode
+class ProgramMode : public Mode
 {
 public:
-    AutoMode() {}
-    AutoMode(Menu *menu) : Mode(menu), iterationDelay(200), previousIterationMillis(0)
+    ProgramMode() {}
+    ProgramMode(Menu *menu) : Mode(menu), iterationDelay(200), previousIterationMillis(0)
     {
     }
     void runIteration();
