@@ -5,8 +5,8 @@
 #include "Globals.h"
 #include "Menu.h"
 
-class AutoMenu : public Menu
+class ProgramModeMenu : public Menu
 {
 public:
-    AutoMenu();
+    ProgramModeMenu();
 };

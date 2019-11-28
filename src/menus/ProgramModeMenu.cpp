@@ -1,10 +1,10 @@
-#include "AutoMenu.h"
+#include "ProgramModeMenu.h"
 
 // LiquidMenu objects have to be defined globally to work
-LiquidLine autoModeLine(1, 0, "AUTO MODE");
+LiquidLine programModeLine(1, 0, "PROGRAM MODE");
 LiquidLine programLine(2, 1, "Program: ", currentProgram);
 LiquidLine speedLine(2, 2, "Speed: ", programSpeed);
-LiquidScreen autoModeScreen(autoModeLine, programLine, speedLine);
+LiquidScreen programModeScreen(programModeLine, programLine, speedLine);
 
 // callback functions for the menu
 void increaseCurrentProgram()
@@ -36,14 +36,14 @@ void decreaseSpeed()
         programSpeed -= 31;
 }
 
-AutoMenu::AutoMenu()
+ProgramModeMenu::ProgramModeMenu()
 {
-    autoModeScreen.set_focusPosition(Position::LEFT);
-    autoModeLine.attach_function(RIGHT_PRESS, Menu::nextMode);
-    autoModeLine.attach_function(LEFT_PRESS, Menu::previousMode);
+    programModeScreen.set_focusPosition(Position::LEFT);
+    programModeLine.attach_function(RIGHT_PRESS, Menu::nextMode);
+    programModeLine.attach_function(LEFT_PRESS, Menu::previousMode);
     programLine.attach_function(RIGHT_PRESS, increaseCurrentProgram);
     programLine.attach_function(LEFT_PRESS, decreaseCurrentProgram);
     speedLine.attach_function(RIGHT_PRESS, increaseSpeed);
     speedLine.attach_function(LEFT_PRESS, decreaseSpeed);
-    liquidMenu.add_screen(autoModeScreen);
+    liquidMenu.add_screen(programModeScreen);
 }

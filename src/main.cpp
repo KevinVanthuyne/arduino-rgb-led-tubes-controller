@@ -47,14 +47,16 @@ LiquidCrystal_I2C lcd(0x27, 20, 4); // (I2C address, amount of characters, amoun
 LiquidMenu liquidMenu(lcd);
 Navigation currentNavigation = NONE;
 
-AutoMenu autoMenu;
+ProgramModeMenu programModeMenu;
+AutoModeMenu autoModeMenu;
 
 // mode variables
+ProgramMode programMode;
 AutoMode autoMode;
-Mode *modes[1] = {&autoMode};
+Mode *modes[2] = {&programMode, &autoMode};
 
 int currentMode = 0;
-int amountOfModes = 1;
+int amountOfModes = 2;
 int currentProgram = 1;
 uint8_t programSpeed = 128; // ranges from 0 to 255
 
@@ -95,11 +97,13 @@ void setup()
   FastLED.setBrightness(128);
 
   // setup menu's
-  autoMenu = AutoMenu();
+  programModeMenu = ProgramModeMenu();
+  autoModeMenu = AutoModeMenu();
 
   // setup LiquidMenu and Modes
   liquidMenu.init();
-  autoMode = AutoMode(&autoMenu);
+  programMode = ProgramMode(&programModeMenu);
+  autoMode = AutoMode(&autoModeMenu);
   liquidMenu.update();
 }
 

@@ -1,4 +1,5 @@
 #pragma once
 
 #include "Menu.h"
-#include "AutoMenu.h"
+#include "ProgramModeMenu.h"
+#include "AutoModeMenu.h"
