@@ -2,7 +2,7 @@
 
 **_DIY Stage Lights!_**
 
-PlatformIO project using qn Arduino Mega to control a custom set of DIY RGB LED tubes used as stage lighting effects.
+PlatformIO project using an Arduino Mega to control a custom set of DIY RGB LED tubes used as stage lighting effects.
 
 ## Installation
 
