@@ -45,6 +45,9 @@ void AutoMode::runProgram()
   case 7:
     iterationDelay = sparkleProgram.runIteration(programSpeed);
     break;
+  case 8:
+    iterationDelay = rainbowProgram.runIteration(programSpeed);
+    break;
   }
 }
 

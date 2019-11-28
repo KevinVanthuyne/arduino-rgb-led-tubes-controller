@@ -11,7 +11,6 @@ void ProgramMode::runIteration()
 
         switch (currentProgram)
         {
-        // TODO program 0 will cycle through all programs automatically
         case 1:
             iterationDelay = colorCycleProgram.runIteration(programSpeed);
             break;
@@ -32,6 +31,9 @@ void ProgramMode::runIteration()
             break;
         case 7:
             iterationDelay = sparkleProgram.runIteration(programSpeed);
+            break;
+        case 8:
+            iterationDelay = rainbowProgram.runIteration(programSpeed);
             break;
         }
     }
