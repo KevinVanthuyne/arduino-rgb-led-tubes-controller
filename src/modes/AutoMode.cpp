@@ -54,6 +54,9 @@ void AutoMode::runProgram()
   case 10:
     iterationDelay = fadingScanlineProgram.runIteration(programSpeed);
     break;
+  case 11:
+    iterationDelay = sparkleColorProgram.runIteration(programSpeed);
+    break;
   }
 }
 
