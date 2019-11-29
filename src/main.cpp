@@ -68,6 +68,7 @@ ColorSweepInToOutProgram colorSweepInToOutProgram;
 ColorSweepOutToInProgram colorSweepOutToInProgram;
 ColorSweepInToOutToInProgram colorSweepInToOutToInProgram;
 SparkleProgram sparkleProgram;
+SparkleColorProgram sparkleColorProgram;
 RainbowProgram rainbowProgram;
 BreathingColorCycleSmoothProgram breathingColorCycleSmoothProgram;
 FadingScanlineProgram fadingScanlineProgram;

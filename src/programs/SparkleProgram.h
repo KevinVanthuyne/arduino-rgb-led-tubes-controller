@@ -11,25 +11,19 @@ public:
     {
         for (CRGB *ledStrip : ledStrips)
         {
-            fill_solid(ledStrip, pixelsPerTube, CRGB::Black);
+            int fadeSpeed = map(speed, 0, 255, 2, 10);
+            fadeToBlackBy(ledStrip, pixelsPerTube, fadeSpeed);
 
-            for (int i = 0; i < pixelsPerTube; i++)
+            int newSparkleSpeed = map(speed, 0, 255, 16, 2);
+            if (currentIteration % newSparkleSpeed == 0)
             {
-                int on = getRandomNumber(0, 1);
-                if (on == 1)
-                    ledStrip[i] = CRGB::White;
-                else
-                {
-                    // big enough gap for black to get a better effect
-                    for (int offset = 0; offset < 5; offset++)
-                        if ((i + offset) < pixelsPerTube)
-                            ledStrip[i + offset] = CRGB::Black;
-                    i += 5;
-                }
+                int pos = random16(pixelsPerTube);
+                ledStrip[pos] += CRGB::White;
             }
         }
         FastLED.show();
+        currentIteration++;
 
-        return map(speed, 0, 255, 200, 50);
+        return 1;
     }
 };
