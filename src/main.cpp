@@ -70,6 +70,7 @@ ColorSweepInToOutToInProgram colorSweepInToOutToInProgram;
 SparkleProgram sparkleProgram;
 RainbowProgram rainbowProgram;
 BreathingColorCycleSmoothProgram breathingColorCycleSmoothProgram;
+FadingScanlineProgram fadingScanlineProgram;
 
 void setup()
 {

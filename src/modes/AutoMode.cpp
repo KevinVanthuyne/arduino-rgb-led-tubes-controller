@@ -51,6 +51,9 @@ void AutoMode::runProgram()
   case 9:
     iterationDelay = breathingColorCycleSmoothProgram.runIteration(programSpeed);
     break;
+  case 10:
+    iterationDelay = fadingScanlineProgram.runIteration(programSpeed);
+    break;
   }
 }
 

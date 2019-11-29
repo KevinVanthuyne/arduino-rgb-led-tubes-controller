@@ -13,6 +13,7 @@ extern ColorSweepInToOutToInProgram colorSweepInToOutToInProgram;
 extern SparkleProgram sparkleProgram;
 extern RainbowProgram rainbowProgram;
 extern BreathingColorCycleSmoothProgram breathingColorCycleSmoothProgram;
+extern FadingScanlineProgram fadingScanlineProgram;
 
 // Abstract class for other Modes to derive from
 class Mode
@@ -39,5 +40,6 @@ protected:
         sparkleProgram = SparkleProgram();
         rainbowProgram = RainbowProgram();
         breathingColorCycleSmoothProgram = BreathingColorCycleSmoothProgram();
+        fadingScanlineProgram = FadingScanlineProgram();
     }
 };
