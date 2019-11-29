@@ -26,5 +26,5 @@ private:
   unsigned long previousProgramMillis;
   void runProgram();
   void newProgram();
-  int allowedPrograms[7] = {1, 2, 3, 4, 5, 6, 7};
+  int allowedPrograms[9] = {1, 2, 3, 4, 5, 6, 7, 8, 9};
 };

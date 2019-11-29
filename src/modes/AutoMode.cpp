@@ -48,6 +48,9 @@ void AutoMode::runProgram()
   case 8:
     iterationDelay = rainbowProgram.runIteration(programSpeed);
     break;
+  case 9:
+    iterationDelay = breathingColorCycleSmoothProgram.runIteration(programSpeed);
+    break;
   }
 }
 
