@@ -72,6 +72,7 @@ SparkleColorProgram sparkleColorProgram;
 RainbowProgram rainbowProgram;
 BreathingColorCycleSmoothProgram breathingColorCycleSmoothProgram;
 FadingScanlineProgram fadingScanlineProgram;
+StackerProgram stackerProgram;
 
 void setup()
 {
@@ -92,12 +93,12 @@ void setup()
   pinMode(BUTTON_LEFT, INPUT_PULLUP);
 
   // set up led tubes
-  FastLED.addLeds<WS2812, TUBE_1_PIN, RGB>(leds1, PIXELS_PER_TUBE);
-  FastLED.addLeds<WS2812, TUBE_2_PIN, RGB>(leds2, PIXELS_PER_TUBE);
-  FastLED.addLeds<WS2812, TUBE_3_PIN, RGB>(leds3, PIXELS_PER_TUBE);
-  FastLED.addLeds<WS2812, TUBE_4_PIN, RGB>(leds4, PIXELS_PER_TUBE);
-  FastLED.addLeds<WS2812, TUBE_5_PIN, RGB>(leds5, PIXELS_PER_TUBE);
-  FastLED.addLeds<WS2812, TUBE_6_PIN, RGB>(leds6, PIXELS_PER_TUBE);
+  FastLED.addLeds<WS2813, TUBE_1_PIN, GRB>(leds1, PIXELS_PER_TUBE);
+  FastLED.addLeds<WS2813, TUBE_2_PIN, GRB>(leds2, PIXELS_PER_TUBE);
+  FastLED.addLeds<WS2813, TUBE_3_PIN, GRB>(leds3, PIXELS_PER_TUBE);
+  FastLED.addLeds<WS2813, TUBE_4_PIN, GRB>(leds4, PIXELS_PER_TUBE);
+  FastLED.addLeds<WS2813, TUBE_5_PIN, GRB>(leds5, PIXELS_PER_TUBE);
+  FastLED.addLeds<WS2813, TUBE_6_PIN, GRB>(leds6, PIXELS_PER_TUBE);
   FastLED.setBrightness(128);
 
   // setup menu's
