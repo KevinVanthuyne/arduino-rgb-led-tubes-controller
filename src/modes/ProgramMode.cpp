@@ -44,6 +44,9 @@ void ProgramMode::runIteration()
         case 11:
             iterationDelay = sparkleColorProgram.runIteration(programSpeed);
             break;
+        case 12:
+            iterationDelay = stackerProgram.runIteration(programSpeed);
+            break;
         }
     }
 }
