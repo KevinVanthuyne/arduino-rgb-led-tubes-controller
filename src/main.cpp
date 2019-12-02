@@ -19,12 +19,12 @@ unsigned long debounceTime = 100;
 #define MIC_PIN A1
 
 // led tube config
-#define TUBE_1_PIN 42 // Not all pins are valid: see FastLED/platforms/xxxxx/fastpin_xxxxx.h
-#define TUBE_2_PIN 44
-#define TUBE_3_PIN 46
-#define TUBE_4_PIN 48
-#define TUBE_5_PIN 50
-#define TUBE_6_PIN 52
+#define TUBE_1_PIN 41
+#define TUBE_2_PIN 43
+#define TUBE_3_PIN 45
+#define TUBE_4_PIN 47
+#define TUBE_5_PIN 49
+#define TUBE_6_PIN 51
 #define PIXELS_PER_TUBE 58
 
 byte pixelsPerTube = PIXELS_PER_TUBE;
@@ -76,8 +76,9 @@ StackerProgram stackerProgram = StackerProgram();
 SingleColorSweepStartToEnd singleColorSweepStartToEnd = SingleColorSweepStartToEnd();
 SingleColorSweepEndToStart singleColorSweepEndToStart = SingleColorSweepEndToStart();
 SingleColorSweepBackAndForth singleColorSweepBackAndForth = SingleColorSweepBackAndForth();
+SingleStripFirstToLastProgram singleStripFirstToLastProgram = SingleStripFirstToLastProgram();
 
-Program *programs[15] = {
+Program *programs[16] = {
     &colorCycleProgram,
     &colorCycleSmoothProgram,
     &colorSweepProgram,
@@ -92,7 +93,8 @@ Program *programs[15] = {
     &stackerProgram,
     &singleColorSweepStartToEnd,
     &singleColorSweepEndToStart,
-    &singleColorSweepBackAndForth};
+    &singleColorSweepBackAndForth,
+    &singleStripJumpProgram};
 
 void setup()
 {
