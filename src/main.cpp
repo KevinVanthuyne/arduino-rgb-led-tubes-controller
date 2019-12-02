@@ -73,7 +73,11 @@ RainbowProgram rainbowProgram = RainbowProgram();
 BreathingColorCycleSmoothProgram breathingColorCycleSmoothProgram = BreathingColorCycleSmoothProgram();
 FadingScanlineProgram fadingScanlineProgram = FadingScanlineProgram();
 StackerProgram stackerProgram = StackerProgram();
-Program *programs[12] = {
+SingleColorSweepStartToEnd singleColorSweepStartToEnd = SingleColorSweepStartToEnd();
+SingleColorSweepEndToStart singleColorSweepEndToStart = SingleColorSweepEndToStart();
+SingleColorSweepBackAndForth singleColorSweepBackAndForth = SingleColorSweepBackAndForth();
+
+Program *programs[15] = {
     &colorCycleProgram,
     &colorCycleSmoothProgram,
     &colorSweepProgram,
@@ -85,7 +89,10 @@ Program *programs[12] = {
     &rainbowProgram,
     &breathingColorCycleSmoothProgram,
     &fadingScanlineProgram,
-    &stackerProgram};
+    &stackerProgram,
+    &singleColorSweepStartToEnd,
+    &singleColorSweepEndToStart,
+    &singleColorSweepBackAndForth};
 
 void setup()
 {
