@@ -12,3 +12,6 @@
 #include "FadingScanlineProgram.h"
 #include "SparkleColorProgram.h"
 #include "StackerProgram.h"
+#include "SingleColorSweepStartToEnd.h"
+#include "SingleColorSweepEndToStart.h"
+#include "SingleColorSweepBackAndForth.h"
