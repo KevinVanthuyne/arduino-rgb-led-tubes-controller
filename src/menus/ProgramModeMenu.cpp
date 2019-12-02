@@ -9,9 +9,9 @@ LiquidScreen programModeScreen(programModeLine, programLine, speedLine);
 // callback functions for the menu
 void increaseCurrentProgram()
 {
-    if (currentProgram < AMOUNT_OF_PROGRAMS)
+    if (currentProgram < sizeof(programs) / sizeof(programs[0]))
         currentProgram++;
-    else if (currentProgram == AMOUNT_OF_PROGRAMS)
+    else if (currentProgram == sizeof(programs) / sizeof(programs[0]))
         currentProgram = 1;
 }
 
@@ -20,7 +20,7 @@ void decreaseCurrentProgram()
     if (currentProgram > 1)
         currentProgram--;
     else if (currentProgram == 1)
-        currentProgram = AMOUNT_OF_PROGRAMS;
+        currentProgram = sizeof(programs) / sizeof(programs[0]);
 }
 
 void increaseSpeed()

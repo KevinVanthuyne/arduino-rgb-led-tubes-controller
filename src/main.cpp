@@ -61,18 +61,31 @@ int currentProgram = 1;
 uint8_t programSpeed = 128; // ranges from 0 to 255
 
 // programs
-ColorCycleProgram colorCycleProgram;
-ColorCycleSmoothProgram colorCycleSmoothProgram;
-ColorSweepProgram colorSweepProgram;
-ColorSweepInToOutProgram colorSweepInToOutProgram;
-ColorSweepOutToInProgram colorSweepOutToInProgram;
-ColorSweepInToOutToInProgram colorSweepInToOutToInProgram;
-SparkleProgram sparkleProgram;
-SparkleColorProgram sparkleColorProgram;
-RainbowProgram rainbowProgram;
-BreathingColorCycleSmoothProgram breathingColorCycleSmoothProgram;
-FadingScanlineProgram fadingScanlineProgram;
-StackerProgram stackerProgram;
+ColorCycleProgram colorCycleProgram = ColorCycleProgram();
+ColorCycleSmoothProgram colorCycleSmoothProgram = ColorCycleSmoothProgram();
+ColorSweepProgram colorSweepProgram = ColorSweepProgram();
+ColorSweepInToOutProgram colorSweepInToOutProgram = ColorSweepInToOutProgram();
+ColorSweepOutToInProgram colorSweepOutToInProgram = ColorSweepOutToInProgram();
+ColorSweepInToOutToInProgram colorSweepInToOutToInProgram = ColorSweepInToOutToInProgram();
+SparkleProgram sparkleProgram = SparkleProgram();
+SparkleColorProgram sparkleColorProgram = SparkleColorProgram();
+RainbowProgram rainbowProgram = RainbowProgram();
+BreathingColorCycleSmoothProgram breathingColorCycleSmoothProgram = BreathingColorCycleSmoothProgram();
+FadingScanlineProgram fadingScanlineProgram = FadingScanlineProgram();
+StackerProgram stackerProgram = StackerProgram();
+Program *programs[12] = {
+    &colorCycleProgram,
+    &colorCycleSmoothProgram,
+    &colorSweepProgram,
+    &colorSweepInToOutProgram,
+    &colorSweepOutToInProgram,
+    &colorSweepInToOutToInProgram,
+    &sparkleProgram,
+    &sparkleColorProgram,
+    &rainbowProgram,
+    &breathingColorCycleSmoothProgram,
+    &fadingScanlineProgram,
+    &stackerProgram};
 
 void setup()
 {
