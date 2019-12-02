@@ -21,46 +21,7 @@ void AutoMode::runIteration()
 
 void AutoMode::runProgram()
 {
-  switch (currentProgram)
-  {
-  // TODO program 0 will cycle through all programs automatically
-  case 1:
-    iterationDelay = colorCycleProgram.runIteration(programSpeed);
-    break;
-  case 2:
-    iterationDelay = colorCycleSmoothProgram.runIteration(programSpeed);
-    break;
-  case 3:
-    iterationDelay = colorSweepProgram.runIteration(programSpeed);
-    break;
-  case 4:
-    iterationDelay = colorSweepInToOutProgram.runIteration(programSpeed);
-    break;
-  case 5:
-    iterationDelay = colorSweepOutToInProgram.runIteration(programSpeed);
-    break;
-  case 6:
-    iterationDelay = colorSweepInToOutToInProgram.runIteration(programSpeed);
-    break;
-  case 7:
-    iterationDelay = sparkleProgram.runIteration(programSpeed);
-    break;
-  case 8:
-    iterationDelay = rainbowProgram.runIteration(programSpeed);
-    break;
-  case 9:
-    iterationDelay = breathingColorCycleSmoothProgram.runIteration(programSpeed);
-    break;
-  case 10:
-    iterationDelay = fadingScanlineProgram.runIteration(programSpeed);
-    break;
-  case 11:
-    iterationDelay = sparkleColorProgram.runIteration(programSpeed);
-    break;
-  case 12:
-    iterationDelay = stackerProgram.runIteration(programSpeed);
-    break;
-  }
+  iterationDelay = programs[currentProgram - 1]->runIteration(programSpeed);
 }
 
 void AutoMode::newProgram()
