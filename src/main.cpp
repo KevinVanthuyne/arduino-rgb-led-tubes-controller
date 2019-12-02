@@ -77,8 +77,10 @@ SingleColorSweepStartToEnd singleColorSweepStartToEnd = SingleColorSweepStartToE
 SingleColorSweepEndToStart singleColorSweepEndToStart = SingleColorSweepEndToStart();
 SingleColorSweepBackAndForth singleColorSweepBackAndForth = SingleColorSweepBackAndForth();
 SingleStripFirstToLastProgram singleStripFirstToLastProgram = SingleStripFirstToLastProgram();
+RandomStripSequenceProgram randomStripSequenceProgram = RandomStripSequenceProgram();
+RandomStripSequenceFadingOutProgram randomStripSequenceFadingOutProgram = RandomStripSequenceFadingOutProgram();
 
-Program *programs[16] = {
+Program *programs[18] = {
     &colorCycleProgram,
     &colorCycleSmoothProgram,
     &colorSweepProgram,
@@ -94,7 +96,9 @@ Program *programs[16] = {
     &singleColorSweepStartToEnd,
     &singleColorSweepEndToStart,
     &singleColorSweepBackAndForth,
-    &singleStripJumpProgram};
+    &singleStripFirstToLastProgram,
+    &randomStripSequenceProgram,
+    &randomStripSequenceFadingOutProgram};
 
 void setup()
 {

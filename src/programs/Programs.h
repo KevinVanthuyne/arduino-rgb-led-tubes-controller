@@ -16,3 +16,5 @@
 #include "SingleColorSweepEndToStart.h"
 #include "SingleColorSweepBackAndForth.h"
 #include "SingleStripFirstToLastProgram.h"
+#include "RandomStripSequenceProgram.h"
+#include "RandomStripSequenceFadingOutProgram.h"
