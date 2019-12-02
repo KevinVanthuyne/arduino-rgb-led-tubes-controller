@@ -30,7 +30,6 @@ void AutoMode::newProgram()
   int amountOfPrograms = (sizeof(programs) / sizeof(programs[0]));
   int newProgramIndex = getRandomNumber(0, amountOfPrograms - 1);
   currentProgram = newProgramIndex + 1;
-  newProgramDelay = getRandomNumber(15, 60) * 1000;
+  newProgramDelay = (unsigned long)getRandomNumber(15, 60) * 1000;
   liquidMenu.update();
-  Serial.println("Changed program");
 }
