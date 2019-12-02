@@ -76,8 +76,9 @@ StackerProgram stackerProgram = StackerProgram();
 SingleColorSweepStartToEnd singleColorSweepStartToEnd = SingleColorSweepStartToEnd();
 SingleColorSweepEndToStart singleColorSweepEndToStart = SingleColorSweepEndToStart();
 SingleColorSweepBackAndForth singleColorSweepBackAndForth = SingleColorSweepBackAndForth();
+SingleStripFirstToLastProgram singleStripFirstToLastProgram = SingleStripFirstToLastProgram();
 
-Program *programs[15] = {
+Program *programs[16] = {
     &colorCycleProgram,
     &colorCycleSmoothProgram,
     &colorSweepProgram,
@@ -92,7 +93,8 @@ Program *programs[15] = {
     &stackerProgram,
     &singleColorSweepStartToEnd,
     &singleColorSweepEndToStart,
-    &singleColorSweepBackAndForth};
+    &singleColorSweepBackAndForth,
+    &singleStripJumpProgram};
 
 void setup()
 {

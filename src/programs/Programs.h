@@ -15,3 +15,4 @@
 #include "SingleColorSweepStartToEnd.h"
 #include "SingleColorSweepEndToStart.h"
 #include "SingleColorSweepBackAndForth.h"
+#include "SingleStripFirstToLastProgram.h"
