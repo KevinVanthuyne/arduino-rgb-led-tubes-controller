@@ -28,6 +28,7 @@ unsigned long debounceTime = 100;
 #define PIXELS_PER_TUBE 58
 
 byte pixelsPerTube = PIXELS_PER_TUBE;
+byte amountOfStrips = 6;
 CRGB leds1[PIXELS_PER_TUBE];
 CRGB leds2[PIXELS_PER_TUBE];
 CRGB leds3[PIXELS_PER_TUBE];
@@ -80,8 +81,9 @@ SingleStripFirstToLastProgram singleStripFirstToLastProgram = SingleStripFirstTo
 RandomStripSequenceProgram randomStripSequenceProgram = RandomStripSequenceProgram();
 RandomStripSequenceFadingOutProgram randomStripSequenceFadingOutProgram = RandomStripSequenceFadingOutProgram();
 ShakingDotsProgram shakingDotsProgram = ShakingDotsProgram();
+ColorUpDownProgram colorUpDownProgram = ColorUpDownProgram();
 
-Program *programs[19] = {
+Program *programs[20] = {
     &colorCycleProgram,
     &colorCycleSmoothProgram,
     &colorSweepProgram,
@@ -100,7 +102,8 @@ Program *programs[19] = {
     &singleStripFirstToLastProgram,
     &randomStripSequenceProgram,
     &randomStripSequenceFadingOutProgram,
-    &shakingDotsProgram};
+    &shakingDotsProgram,
+    &colorUpDownProgram};
 
 void setup()
 {

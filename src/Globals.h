@@ -13,7 +13,7 @@ extern LiquidMenu liquidMenu;
 
 extern int currentMode;
 extern int amountOfModes;
-extern Program *programs[19];
+extern Program *programs[20];
 extern int currentProgram;
 extern uint8_t programSpeed;
 extern float soundSensitivity;
@@ -25,3 +25,4 @@ extern CRGB leds3[];
 extern CRGB leds4[];
 extern CRGB leds5[];
 extern CRGB leds6[];
+extern byte amountOfStrips;
