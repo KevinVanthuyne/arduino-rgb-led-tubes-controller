@@ -79,8 +79,9 @@ SingleColorSweepBackAndForth singleColorSweepBackAndForth = SingleColorSweepBack
 SingleStripFirstToLastProgram singleStripFirstToLastProgram = SingleStripFirstToLastProgram();
 RandomStripSequenceProgram randomStripSequenceProgram = RandomStripSequenceProgram();
 RandomStripSequenceFadingOutProgram randomStripSequenceFadingOutProgram = RandomStripSequenceFadingOutProgram();
+ShakingDotsProgram shakingDotsProgram = ShakingDotsProgram();
 
-Program *programs[18] = {
+Program *programs[19] = {
     &colorCycleProgram,
     &colorCycleSmoothProgram,
     &colorSweepProgram,
@@ -98,7 +99,8 @@ Program *programs[18] = {
     &singleColorSweepBackAndForth,
     &singleStripFirstToLastProgram,
     &randomStripSequenceProgram,
-    &randomStripSequenceFadingOutProgram};
+    &randomStripSequenceFadingOutProgram,
+    &shakingDotsProgram};
 
 void setup()
 {

@@ -18,3 +18,4 @@
 #include "SingleStripFirstToLastProgram.h"
 #include "RandomStripSequenceProgram.h"
 #include "RandomStripSequenceFadingOutProgram.h"
+#include "ShakingDotsProgram.h"
