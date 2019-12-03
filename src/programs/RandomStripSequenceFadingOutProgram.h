@@ -8,7 +8,7 @@ class RandomStripSequenceFadingOutProgram : public Program
 public:
   RandomStripSequenceFadingOutProgram() : Program(),
                                           previousStrip(-1),
-                                          hue(0),
+                                          hue(getRandomNumber(0, 255)),
                                           maxStrips(3)
   {
   }

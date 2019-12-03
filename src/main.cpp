@@ -102,7 +102,7 @@ Program *programs[18] = {
 
 void setup()
 {
-  Serial.begin(9600);
+  Serial.begin(115200);
   randomSeed(analogRead(A0));
   pinMode(MIC_PIN, INPUT);
 

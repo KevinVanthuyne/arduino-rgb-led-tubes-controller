@@ -6,7 +6,7 @@
 class SparkleColorProgram : public Program
 {
 public:
-  SparkleColorProgram() : Program(), hue(0) {}
+  SparkleColorProgram() : Program(), hue(getRandomNumber(0, 255)) {}
   int runIteration(uint8_t speed)
   {
     for (CRGB *ledStrip : ledStrips)

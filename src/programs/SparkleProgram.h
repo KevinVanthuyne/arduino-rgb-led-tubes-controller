@@ -18,7 +18,9 @@ public:
             if (currentIteration % newSparkleSpeed == 0)
             {
                 int pos = random16(pixelsPerTube);
-                ledStrip[pos] += CRGB::White;
+                for (int i = 0; i < 2; i++)
+                    if (pos + i < pixelsPerTube - 1)
+                        ledStrip[pos + i] += CRGB::White;
             }
         }
         FastLED.show();

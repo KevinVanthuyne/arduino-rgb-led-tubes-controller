@@ -8,7 +8,7 @@ class SingleStripFirstToLastProgram : public Program
 public:
   SingleStripFirstToLastProgram() : Program(),
                                     currentStrip(1),
-                                    currentColor(0) {}
+                                    currentColor(getRandomNumber(0, (sizeof(colors) / sizeof(colors[0])) - 1)) {}
 
   int runIteration(uint8_t speed)
   {
