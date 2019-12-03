@@ -7,7 +7,7 @@
 class FadingScanlineProgram : public Program
 {
 public:
-  FadingScanlineProgram() : Program(), hue(0) {}
+  FadingScanlineProgram() : Program(), hue(getRandomNumber(0, 255)) {}
   int runIteration(uint8_t speed)
   {
     if (currentIteration % 32 == 0)

@@ -1,14 +1,10 @@
 #pragma once
 
 #include <Arduino.h>
+#include "FastLED.h"
 
 void noop();
 int getRandomNumber(int min, int max);
 int getRandomNumber(int min, int max, int previousNumber);
-uint32_t rgbColor(uint8_t r, uint8_t g, uint8_t b);
-
-class Filters
-{
-public:
-    static float bassFilter(float sample);
-};
+CRGB fadeTowardColor(CRGB &currentColor, const CRGB targetColor, uint8_t amount);
+void nblendU8TowardU8(uint8_t &current, const uint8_t target, uint8_t amount);

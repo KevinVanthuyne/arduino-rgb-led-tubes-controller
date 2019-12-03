@@ -7,7 +7,7 @@
 class RainbowProgram : public Program
 {
 public:
-  RainbowProgram() : Program(), hue(0) {}
+  RainbowProgram() : Program(), hue(getRandomNumber(0, 255)) {}
   int runIteration(uint8_t speed)
   {
     hue++;

@@ -32,4 +32,5 @@ void AutoMode::newProgram()
   currentProgram = newProgramIndex + 1;
   newProgramDelay = (unsigned long)getRandomNumber(15, 60) * 1000;
   liquidMenu.update();
+  FastLED.clear();
 }

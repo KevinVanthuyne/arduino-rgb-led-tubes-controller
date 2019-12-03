@@ -6,7 +6,7 @@
 class BreathingColorCycleSmoothProgram : public Program
 {
 public:
-  BreathingColorCycleSmoothProgram() : Program(), hue(0) {}
+  BreathingColorCycleSmoothProgram() : Program(), hue(getRandomNumber(0, 255)) {}
   int runIteration(uint8_t speed)
   {
     if (currentIteration <= 255)

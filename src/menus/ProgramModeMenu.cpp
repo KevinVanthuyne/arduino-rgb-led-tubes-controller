@@ -13,6 +13,8 @@ void increaseCurrentProgram()
         currentProgram++;
     else if (currentProgram == sizeof(programs) / sizeof(programs[0]))
         currentProgram = 1;
+
+    FastLED.clear();
 }
 
 void decreaseCurrentProgram()
@@ -21,6 +23,8 @@ void decreaseCurrentProgram()
         currentProgram--;
     else if (currentProgram == 1)
         currentProgram = sizeof(programs) / sizeof(programs[0]);
+
+    FastLED.clear();
 }
 
 void increaseSpeed()

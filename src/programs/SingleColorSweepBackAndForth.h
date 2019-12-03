@@ -9,7 +9,7 @@ class SingleColorSweepBackAndForth : public Program
 public:
   SingleColorSweepBackAndForth() : Program(),
                                    currentCycle(0),
-                                   currentColor(0),
+                                   currentColor(getRandomNumber(0, (sizeof(colors) / sizeof(colors[0])) - 1)),
                                    previousColor(0),
                                    currentPos(0),
                                    isFadingOut(false),
