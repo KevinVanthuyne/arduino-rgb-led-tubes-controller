@@ -20,3 +20,4 @@
 #include "RandomStripSequenceFadingOutProgram.h"
 #include "ShakingDotsProgram.h"
 #include "triangle/ColorUpDownProgram.h"
+#include "triangle/RotorFadeProgram.h"
