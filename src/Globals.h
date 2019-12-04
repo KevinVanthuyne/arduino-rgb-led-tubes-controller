@@ -13,7 +13,7 @@ extern LiquidMenu liquidMenu;
 
 extern int currentMode;
 extern int amountOfModes;
-extern Program *programs[24];
+extern Program *programs[25];
 extern int currentProgram;
 extern uint8_t programSpeed;
 extern float soundSensitivity;

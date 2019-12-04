@@ -24,3 +24,4 @@
 #include "triangle/OneLongLineProgram.h"
 #include "triangle/LeftRightTriangleProgram.h"
 #include "triangle/GoAroundInTriangleProgram.h"
+#include "triangle/RippleProgram.h"
