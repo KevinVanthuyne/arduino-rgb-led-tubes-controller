@@ -8,7 +8,7 @@ class ColorUpDownProgram : public Program
 {
 public:
   ColorUpDownProgram() : Program(),
-                         currentColor(random(0, (sizeof(colors) / sizeof(colors[0])) - 1)),
+                         currentColor(random(0, amountOfColors())),
                          isFadingOut(false) {}
 
   int runIteration(uint8_t speed)
@@ -28,7 +28,7 @@ public:
     if (isFadingOut && currentPos < 0)
     {
       currentPos = 0;
-      currentColor = random(0, (sizeof(colors) / sizeof(colors[0])) - 1);
+      currentColor = random(0, amountOfColors());
       isFadingOut = false;
     }
 

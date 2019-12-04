@@ -83,8 +83,9 @@ RandomStripSequenceFadingOutProgram randomStripSequenceFadingOutProgram = Random
 ShakingDotsProgram shakingDotsProgram = ShakingDotsProgram();
 ColorUpDownProgram colorUpDownProgram = ColorUpDownProgram();
 RotorFadeProgram rotorFadeProgram = RotorFadeProgram();
+OneLongLineProgram oneLongLineProgram = OneLongLineProgram();
 
-Program *programs[21] = {
+Program *programs[22] = {
     &colorCycleProgram,
     &colorCycleSmoothProgram,
     &colorSweepProgram,
@@ -105,7 +106,8 @@ Program *programs[21] = {
     &randomStripSequenceFadingOutProgram,
     &shakingDotsProgram,
     &colorUpDownProgram,
-    &rotorFadeProgram};
+    &rotorFadeProgram,
+    &oneLongLineProgram};
 
 void setup()
 {

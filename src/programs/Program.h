@@ -12,11 +12,6 @@ public:
     virtual ~Program() {}
     // runs a single iteration of the program/animation and returns the required wait time
     virtual int runIteration(uint8_t speed) = 0;
-
-protected:
-    unsigned int currentIteration;
-
-    // colors
     CRGB colors[9] = {
         CRGB(255, 0, 0),   // red
         CRGB(255, 128, 0), // orange
@@ -28,4 +23,9 @@ protected:
         CRGB(128, 0, 255), // purple
         CRGB(255, 0, 255), // pink
     };
+
+protected:
+    unsigned int currentIteration;
+
+    // colors
 };

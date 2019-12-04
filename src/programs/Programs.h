@@ -21,3 +21,4 @@
 #include "ShakingDotsProgram.h"
 #include "triangle/ColorUpDownProgram.h"
 #include "triangle/RotorFadeProgram.h"
+#include "triangle/OneLongLineProgram.h"

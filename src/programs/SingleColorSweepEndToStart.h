@@ -9,7 +9,7 @@ class SingleColorSweepEndToStart : public Program
 public:
   SingleColorSweepEndToStart() : Program(),
                                  currentCycle(0),
-                                 currentColor(getRandomNumber(0, (sizeof(colors) / sizeof(colors[0])) - 1)),
+                                 currentColor(getRandomNumber(0, amountOfColors())),
                                  previousColor(0),
                                  currentPos(pixelsPerTube - 1),
                                  isFadingOut(true) {}
