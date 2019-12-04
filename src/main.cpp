@@ -84,8 +84,9 @@ ShakingDotsProgram shakingDotsProgram = ShakingDotsProgram();
 ColorUpDownProgram colorUpDownProgram = ColorUpDownProgram();
 RotorFadeProgram rotorFadeProgram = RotorFadeProgram();
 OneLongLineProgram oneLongLineProgram = OneLongLineProgram();
+LeftRightTriangleProgram leftRightTriangleProgram = LeftRightTriangleProgram();
 
-Program *programs[22] = {
+Program *programs[23] = {
     &colorCycleProgram,
     &colorCycleSmoothProgram,
     &colorSweepProgram,
@@ -107,7 +108,8 @@ Program *programs[22] = {
     &shakingDotsProgram,
     &colorUpDownProgram,
     &rotorFadeProgram,
-    &oneLongLineProgram};
+    &oneLongLineProgram,
+    &leftRightTriangleProgram};
 
 void setup()
 {

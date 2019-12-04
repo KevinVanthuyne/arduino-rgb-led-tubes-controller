@@ -22,3 +22,4 @@
 #include "triangle/ColorUpDownProgram.h"
 #include "triangle/RotorFadeProgram.h"
 #include "triangle/OneLongLineProgram.h"
+#include "triangle/LeftRightTriangleProgram.h"
