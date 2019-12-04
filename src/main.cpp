@@ -85,8 +85,9 @@ ColorUpDownProgram colorUpDownProgram = ColorUpDownProgram();
 RotorFadeProgram rotorFadeProgram = RotorFadeProgram();
 OneLongLineProgram oneLongLineProgram = OneLongLineProgram();
 LeftRightTriangleProgram leftRightTriangleProgram = LeftRightTriangleProgram();
+GoAroundInTriangleProgram goAroundInTriangleProgram = GoAroundInTriangleProgram();
 
-Program *programs[23] = {
+Program *programs[24] = {
     &colorCycleProgram,
     &colorCycleSmoothProgram,
     &colorSweepProgram,
@@ -109,7 +110,8 @@ Program *programs[23] = {
     &colorUpDownProgram,
     &rotorFadeProgram,
     &oneLongLineProgram,
-    &leftRightTriangleProgram};
+    &leftRightTriangleProgram,
+    &goAroundInTriangleProgram};
 
 void setup()
 {

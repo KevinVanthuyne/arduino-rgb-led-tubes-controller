@@ -23,3 +23,4 @@
 #include "triangle/RotorFadeProgram.h"
 #include "triangle/OneLongLineProgram.h"
 #include "triangle/LeftRightTriangleProgram.h"
+#include "triangle/GoAroundInTriangleProgram.h"
