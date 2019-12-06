@@ -90,8 +90,9 @@ RippleProgram rippleProgram = RippleProgram();
 FireProgram fireProgram = FireProgram();
 JuggleProgram juggleProgram = JuggleProgram();
 TheMatrixProgram theMatrixProgram = TheMatrixProgram();
+LightningProgram lightningProgram = LightningProgram();
 
-Program *programs[28] = {
+Program *programs[29] = {
     &colorCycleProgram,
     &colorCycleSmoothProgram,
     &colorSweepProgram,
@@ -119,7 +120,8 @@ Program *programs[28] = {
     &rippleProgram,
     &fireProgram,
     &juggleProgram,
-    &theMatrixProgram};
+    &theMatrixProgram,
+    &lightningProgram};
 
 void setup()
 {
