@@ -26,11 +26,11 @@ void AutoMode::runProgram()
 
 void AutoMode::newProgram()
 {
-  programSpeed = random(64, 128);
+  programSpeed = random(64, 160);
   int amountOfPrograms = (sizeof(programs) / sizeof(programs[0]));
   int newProgramIndex = getRandomNumber(0, amountOfPrograms - 1);
   currentProgram = newProgramIndex + 1;
-  newProgramDelay = (unsigned long)getRandomNumber(15, 60) * 1000;
+  newProgramDelay = (unsigned long)getRandomNumber(30, 90) * 1000;
   liquidMenu.update();
   FastLED.clear();
 }
