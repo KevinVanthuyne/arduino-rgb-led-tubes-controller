@@ -88,8 +88,9 @@ LeftRightTriangleProgram leftRightTriangleProgram = LeftRightTriangleProgram();
 GoAroundInTriangleProgram goAroundInTriangleProgram = GoAroundInTriangleProgram();
 RippleProgram rippleProgram = RippleProgram();
 FireProgram fireProgram = FireProgram();
+JuggleProgram juggleProgram = JuggleProgram();
 
-Program *programs[26] = {
+Program *programs[27] = {
     &colorCycleProgram,
     &colorCycleSmoothProgram,
     &colorSweepProgram,
@@ -115,7 +116,8 @@ Program *programs[26] = {
     &leftRightTriangleProgram,
     &goAroundInTriangleProgram,
     &rippleProgram,
-    &fireProgram};
+    &fireProgram,
+    &juggleProgram};
 
 void setup()
 {
