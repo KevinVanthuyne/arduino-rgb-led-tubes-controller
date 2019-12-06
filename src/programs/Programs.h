@@ -31,3 +31,4 @@
 #include "LightingProgram.h"
 #include "AlternatingHalvesProgram.h"
 #include "triangle/OutwardDotsProgram.h"
+#include "triangle/FadingOutwardDotProgram.h"

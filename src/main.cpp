@@ -93,8 +93,9 @@ TheMatrixProgram theMatrixProgram = TheMatrixProgram();
 LightningProgram lightningProgram = LightningProgram();
 AlternatingHalvesProgram alternatingHalvesProgram = AlternatingHalvesProgram();
 OutwardDotsProgram outwardDotsProgram = OutwardDotsProgram();
+FadingOutwardDotProgram fadingOutwardDotProgram = FadingOutwardDotProgram();
 
-Program *programs[31] = {
+Program *programs[32] = {
     &colorCycleProgram,
     &colorCycleSmoothProgram,
     &colorSweepProgram,
@@ -125,7 +126,8 @@ Program *programs[31] = {
     &theMatrixProgram,
     &lightningProgram,
     &alternatingHalvesProgram,
-    &outwardDotsProgram};
+    &outwardDotsProgram,
+    &fadingOutwardDotProgram};
 
 void setup()
 {
