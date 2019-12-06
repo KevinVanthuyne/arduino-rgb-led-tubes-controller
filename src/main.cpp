@@ -89,8 +89,9 @@ GoAroundInTriangleProgram goAroundInTriangleProgram = GoAroundInTriangleProgram(
 RippleProgram rippleProgram = RippleProgram();
 FireProgram fireProgram = FireProgram();
 JuggleProgram juggleProgram = JuggleProgram();
+TheMatrixProgram theMatrixProgram = TheMatrixProgram();
 
-Program *programs[27] = {
+Program *programs[28] = {
     &colorCycleProgram,
     &colorCycleSmoothProgram,
     &colorSweepProgram,
@@ -117,7 +118,8 @@ Program *programs[27] = {
     &goAroundInTriangleProgram,
     &rippleProgram,
     &fireProgram,
-    &juggleProgram};
+    &juggleProgram,
+    &theMatrixProgram};
 
 void setup()
 {

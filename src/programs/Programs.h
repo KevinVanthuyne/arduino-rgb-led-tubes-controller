@@ -27,3 +27,4 @@
 #include "triangle/RippleProgram.h"
 #include "triangle/FireProgram.h"
 #include "JuggleProgram.h"
+#include "triangle/TheMatrixProgram.h"
