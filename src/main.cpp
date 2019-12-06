@@ -91,8 +91,10 @@ FireProgram fireProgram = FireProgram();
 JuggleProgram juggleProgram = JuggleProgram();
 TheMatrixProgram theMatrixProgram = TheMatrixProgram();
 LightningProgram lightningProgram = LightningProgram();
+AlternatingHalvesProgram alternatingHalvesProgram = AlternatingHalvesProgram();
+OutwardDotsProgram outwardDotsProgram = OutwardDotsProgram();
 
-Program *programs[29] = {
+Program *programs[31] = {
     &colorCycleProgram,
     &colorCycleSmoothProgram,
     &colorSweepProgram,
@@ -121,7 +123,9 @@ Program *programs[29] = {
     &fireProgram,
     &juggleProgram,
     &theMatrixProgram,
-    &lightningProgram};
+    &lightningProgram,
+    &alternatingHalvesProgram,
+    &outwardDotsProgram};
 
 void setup()
 {

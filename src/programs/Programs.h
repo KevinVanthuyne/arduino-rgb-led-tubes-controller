@@ -29,3 +29,5 @@
 #include "JuggleProgram.h"
 #include "triangle/TheMatrixProgram.h"
 #include "LightingProgram.h"
+#include "AlternatingHalvesProgram.h"
+#include "triangle/OutwardDotsProgram.h"
