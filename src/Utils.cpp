@@ -51,3 +51,8 @@ void nblendU8TowardU8(uint8_t &current, const uint8_t target, uint8_t amount)
         current -= delta;
     }
 }
+
+int amountOfColors()
+{
+    return (sizeof(Program::colors) / sizeof(Program::colors[0])) - 1;
+}

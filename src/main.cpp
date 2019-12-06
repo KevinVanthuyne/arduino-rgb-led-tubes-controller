@@ -28,6 +28,7 @@ unsigned long debounceTime = 100;
 #define PIXELS_PER_TUBE 58
 
 byte pixelsPerTube = PIXELS_PER_TUBE;
+byte amountOfStrips = 6;
 CRGB leds1[PIXELS_PER_TUBE];
 CRGB leds2[PIXELS_PER_TUBE];
 CRGB leds3[PIXELS_PER_TUBE];
@@ -80,8 +81,21 @@ SingleStripFirstToLastProgram singleStripFirstToLastProgram = SingleStripFirstTo
 RandomStripSequenceProgram randomStripSequenceProgram = RandomStripSequenceProgram();
 RandomStripSequenceFadingOutProgram randomStripSequenceFadingOutProgram = RandomStripSequenceFadingOutProgram();
 ShakingDotsProgram shakingDotsProgram = ShakingDotsProgram();
+ColorUpDownProgram colorUpDownProgram = ColorUpDownProgram();
+RotorFadeProgram rotorFadeProgram = RotorFadeProgram();
+OneLongLineProgram oneLongLineProgram = OneLongLineProgram();
+LeftRightTriangleProgram leftRightTriangleProgram = LeftRightTriangleProgram();
+GoAroundInTriangleProgram goAroundInTriangleProgram = GoAroundInTriangleProgram();
+RippleProgram rippleProgram = RippleProgram();
+FireProgram fireProgram = FireProgram();
+JuggleProgram juggleProgram = JuggleProgram();
+TheMatrixProgram theMatrixProgram = TheMatrixProgram();
+LightningProgram lightningProgram = LightningProgram();
+AlternatingHalvesProgram alternatingHalvesProgram = AlternatingHalvesProgram();
+OutwardDotsProgram outwardDotsProgram = OutwardDotsProgram();
+FadingOutwardDotProgram fadingOutwardDotProgram = FadingOutwardDotProgram();
 
-Program *programs[19] = {
+Program *programs[32] = {
     &colorCycleProgram,
     &colorCycleSmoothProgram,
     &colorSweepProgram,
@@ -100,7 +114,20 @@ Program *programs[19] = {
     &singleStripFirstToLastProgram,
     &randomStripSequenceProgram,
     &randomStripSequenceFadingOutProgram,
-    &shakingDotsProgram};
+    &shakingDotsProgram,
+    &colorUpDownProgram,
+    &rotorFadeProgram,
+    &oneLongLineProgram,
+    &leftRightTriangleProgram,
+    &goAroundInTriangleProgram,
+    &rippleProgram,
+    &fireProgram,
+    &juggleProgram,
+    &theMatrixProgram,
+    &lightningProgram,
+    &alternatingHalvesProgram,
+    &outwardDotsProgram,
+    &fadingOutwardDotProgram};
 
 void setup()
 {
