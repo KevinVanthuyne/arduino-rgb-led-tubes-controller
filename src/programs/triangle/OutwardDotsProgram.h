@@ -16,15 +16,15 @@ public:
     int dotInterval = map(speed, 0, 255, 100, 20);
     int hueStep = map(speed, 0, 255, 16, 1);
 
-    // for (CRGB *ledStrip : ledStrips)
-    //   fadeToBlackBy(ledStrip, pixelsPerTube, 20);
-
     if (currentIteration % dotInterval == 0)
     {
-      ledStrips[0][1] = CHSV(hue, 255, 255);
-      ledStrips[3][1] = CHSV(hue, 255, 255);
-      ledStrips[2][pixelsPerTube - 2] = CHSV(hue, 255, 255);
-      ledStrips[5][pixelsPerTube - 2] = CHSV(hue, 255, 255);
+      for (int i = 1; i < 5; i++)
+      {
+        ledStrips[0][i] = CHSV(hue, 255, 255);
+        ledStrips[3][i] = CHSV(hue, 255, 255);
+        ledStrips[2][pixelsPerTube - 1 - i] = CHSV(hue, 255, 255);
+        ledStrips[5][pixelsPerTube - 1 - i] = CHSV(hue, 255, 255);
+      }
       hue += hueStep;
     }
 
