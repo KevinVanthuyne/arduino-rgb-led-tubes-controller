@@ -25,3 +25,4 @@
 #include "triangle/LeftRightTriangleProgram.h"
 #include "triangle/GoAroundInTriangleProgram.h"
 #include "triangle/RippleProgram.h"
+#include "triangle/FireProgram.h"

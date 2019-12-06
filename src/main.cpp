@@ -87,8 +87,9 @@ OneLongLineProgram oneLongLineProgram = OneLongLineProgram();
 LeftRightTriangleProgram leftRightTriangleProgram = LeftRightTriangleProgram();
 GoAroundInTriangleProgram goAroundInTriangleProgram = GoAroundInTriangleProgram();
 RippleProgram rippleProgram = RippleProgram();
+FireProgram fireProgram = FireProgram();
 
-Program *programs[25] = {
+Program *programs[26] = {
     &colorCycleProgram,
     &colorCycleSmoothProgram,
     &colorSweepProgram,
@@ -113,7 +114,8 @@ Program *programs[25] = {
     &oneLongLineProgram,
     &leftRightTriangleProgram,
     &goAroundInTriangleProgram,
-    &rippleProgram};
+    &rippleProgram,
+    &fireProgram};
 
 void setup()
 {
